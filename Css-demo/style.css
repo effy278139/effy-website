@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(57,57,57);
+}
+p{
+    color:rgb(255, 255, 255);
+}
+h1{
+    font-size:4em
+}
+
+body {
+	cursor: url('mouse.png'), default;
+}
+
