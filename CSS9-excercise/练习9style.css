@@ -1,0 +1,21 @@
+p{
+  color: orange;
+}
+
+
+h1{
+  color: rgb(255, 255, 255);
+  font-size: 40pt;
+}
+
+h1:hover{
+  background-color: #f0f;
+  
+  }
+
+h2{
+  font-size: 15pt;
+  font-family: Times;
+  font-style: italic;
+  color:#f0f(255, 225, 170);
+}

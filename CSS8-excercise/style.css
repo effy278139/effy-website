@@ -1,0 +1,43 @@
+#square {
+    width: 100px;
+    height: 100px;
+    background: black;
+  }
+  #rectangle {
+    width: 200px;
+    height: 100px;
+    background: black;
+  }
+  #circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: black;
+  }
+  #circle-inside {
+    /* relative to the parent */
+    width: 50%;
+    height: 50%;
+    position: relative;
+    top: 25%;
+    left: 25%;
+    
+    border-radius: 50%;
+    background: red;
+  }
+  #oval {
+    width: 200px;
+    height: 100px;
+    border-radius: 100px / 50px;
+    background: black;
+  }
+  #triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid black;
+    transform: translate(230px, 120px) scale(2, 4) ;
+     }
+     
+  

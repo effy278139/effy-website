@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+ 
+<body>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .box {
+      width: 500px;
+      height: 500px;
+      border: 1px solid #f0f;
+      margin: 100px 0 0 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .move {
+      width: 30%;
+      height: 70%;
+      border: 1px solid blue;
+      border-radius: 10px;
+      position: absolute;
+      right: -150px;
+      top: 15%;
+    }
+    #btn {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+    .show {
+      animation: rotate1 0.4s linear;
+      /* 动画执行一次 */
+      animation-iteration-count: 1;
+      /* 停留在最后一帧 */
+      animation-fill-mode: both;
+    }
+    .hide {
+      animation: rotate2 0.4s linear;
+      /* 动画执行一次 */
+      animation-iteration-count: 1;
+      /* 停留在最后一帧 */
+      animation-fill-mode: both;
+    }
+    /* 向左移动 */
+    @keyframes rotate1 {
+      0% {
+        transform: translateX(0);
+      }
+ 
+      100% {
+        transform: translateX(-150px);
+      }
+    }
+    /* 向右移动 */
+    @keyframes rotate2 {
+      0% {
+        transform: translateX(-150px);
+      }
+ 
+      100% {
+        transform: translateX(0);
+      }
+    }
+  </style>
+  <div class="box">
+    <div class="move"></div>
+    <button id="btn"></button>
+  </div>
+  <script>
+    //  DOM.classList -> 返回一个元素的类属性的实时 DOMTokenList 集合。
+    //  DOM.classList.add('class1', 'class2', 'class3')  // 添加一个或多个类名
+    //  DOM.classList.remove('class1', 'class2', 'class3')  // 删除一个或多个类名
+    //  DOM.classList.toggle('class1', 'class2', 'class3')  // 切换类名（有则移除，没有则添加（切换效果））
+ 
+    let flag = true  // true -> 点击展示， false -> 点击隐藏
+    const $ = name => document.querySelector(name)
+    $('#btn').innerHTML = '点击展开'
+    $('#btn').onclick = () => {
+      if (flag) {
+        $('.move').classList.remove('hide');
+        $('.move').classList.add('show');
+        setTimeout(() => {
+          $('#btn').innerHTML = '点击收起'
+        }, 400)
+      } else {
+        $('.move').classList.remove('show');
+        $('.move').classList.add('hide');
+        setTimeout(() => {
+          $('#btn').innerHTML = '点击展开'
+        }, 400)
+      }
+      flag = !flag
+    }
+  </script>
+</body>
+</html>

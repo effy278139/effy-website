@@ -1,6 +1,4 @@
-body{
-    background-color: rgb(57,57,57);
-}
+
 p{
     color:rgb(255, 255, 255);
 }
@@ -8,7 +6,16 @@ h1{
     font-size:4em
 }
 
+p:hover{
+    color :rgb(255,0,162)
+}
+
 body {
 	cursor: url('mouse.png'), default;
 }
-
+:root {
+    --mag: #f0f;
+    --grey: #ccc;
+    --dgrey: #2e2d2c;
+    --wht: #eee
+}
